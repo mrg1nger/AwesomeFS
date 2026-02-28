@@ -1,6 +1,6 @@
 # AwesomeFS
 
-When you just want to server a file over HTTP on whatever port you specify. Nothing fancy.
+When you just want to serve a file over HTTP on whatever port you specify. Nothing fancy.
 
 ## Features
 

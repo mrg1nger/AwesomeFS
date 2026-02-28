@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	// Command-line flag for port
+	// Command-line flags
+	host := flag.String("host", "0.0.0.0", "interface to bind to")
 	port := flag.Int("port", 8081, "port to host the server on")
 	flag.Parse()
 
@@ -17,8 +18,8 @@ func main() {
 	http.Handle("/", fs)
 
 	// Start the server
-	addr := fmt.Sprintf(":%d", *port)
-	fmt.Printf("Starting file server at http://localhost%s\n", addr)
+	addr := fmt.Sprintf("%s:%d", *host, *port)
+	fmt.Printf("Starting file server at http://%s\n", addr)
 	fmt.Println("Serving files from ./files directory")
 
 	if err := http.ListenAndServe(addr, nil); err != nil {
