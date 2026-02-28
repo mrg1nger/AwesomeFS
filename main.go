@@ -20,7 +20,7 @@ func main() {
 	addr := fmt.Sprintf(":%d", *port)
 	fmt.Printf("Starting file server at http://localhost%s\n", addr)
 	fmt.Println("Serving files from ./files directory")
-	
+
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Fatal(err)
 	}
