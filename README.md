@@ -1,6 +1,6 @@
 # AwesomeFS
 
-A simple, lightweight HTTP file server written in Go.
+When you just want to server a file over HTTP on whatever port you specify. Nothing fancy.
 
 ## Features
 
